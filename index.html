@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patient Data</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="index.js"></script>
+
+</head>
+
+<body>
+<header>
+    <div class="header-mobile">
+      <div class="mobile-header">
+        <div class="header-img">
+          <img src="./assets/img/TestLogo.svg" alt="logo" />
+        </div>
+        <div id="toggleButton" class="display-nav">
+          <img src="./assets/img/close.png" alt="First Image" id="toggleImage">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="headers">
+
+    <header>
+      <div class="header">
+        <div class="header-content">
+          <div class="header-img">
+            <img src="./assets/img/TestLogo.svg" alt="logo" />
+          </div>
+
+          <div class="header-items">
+            <ul>
+              <li class="list-items">
+                <a href="#">
+                  <div class="header-items-img">
+                    <img src="./assets/img/home.svg" alt="logo" />
+                  </div>
+                  Overview
+                </a>
+              </li>
+              <li class="active">
+                <a href="#">
+                  <div class="header-items-img-patients">
+                    <img src="./assets/img/patient.svg" alt="logo" />
+                  </div>
+                  Patients
+                </a>
+              </li>
+              <li class="list-items">
+                <a href="#">
+                  <div class="header-items-img">
+                    <img src="./assets/img/schedule.svg" alt="logo" />
+                  </div>
+                  Schedule
+                </a>
+              </li>
+              <li class="list-items">
+                <a href="#">
+                  <div class="header-items-img">
+                    <img src="./assets/img/message.svg" alt="logo" />
+                  </div>
+                  Message
+                </a>
+              </li>
+              <li class="list-items">
+                <a href="#">
+                  <div class="header-items-img">
+                    <img src="./assets/img/transactions.svg" alt="logo" />
+                  </div>
+                  Transaction
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="header-user-section">
+              <div class="header-user-details">
+                <div class="header-img-user">
+                  <img src="./assets/img/user-img.png" alt="user icon" />
+                </div>
+                <div>
+                  <h1 class="user-name">Dr. Jose Simmons</h1>
+                  <p class="user-designation">General Practitioner</p>
+                </div>
+              </div>
+              <div class="header-img-setting">
+                <img src="./assets/img/settings.png" alt="user icon" />
+              </div>
+              <div class="header-img-menu">
+                <img src="./assets/img/menu.svg" alt="user icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="left-bar">
+        
+        <div class="left-bar-info">
+          <div class="search">
+            <h1>Patients</h1>
+            <img src="./assets/img/search.svg" alt="search icon" />
+          </div>
+          <div class="patients">
+            
+            <div class="patient-categ">
+              
+              <div class="patients-details">
+                <div class="patient-img">
+                  <img id="patient-profile" />
+                </div>
+                <div class="patient--details">
+                  <h1 class="patient-name" id="patient-name"></h1>
+                  <p class="patient-designation" id="patient-age-gender"></p>
+                </div>
+              </div>
+              <div class="select-options">
+                <img src="./assets/img/menu2.svg" alt="user img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="diagnosis">
+        <div class="diagnosis-categ">
+          <!-- <img src="./assets/img/disgnosis.png" /> -->
+        <div class="canvas">
+          <div>
+            <div class="chart-details">
+              <div class="chart-title"><h1>Blood pressure</h1></div>
+              <div class="chart-duration">
+                <p>Last 6 Months</p>
+                <img src="./assets/img/expand.svg" alt="expand"/>
+              </div>
+            </div>
+            <div class="graph-canvas">
+              <canvas id="bloodPressureChart"></canvas>
+
+            </div>
+          </div>
+         
+              <div class="diagnosis-data">
+                <div class="diagnosis-info">
+                  <div class="diag-name">
+                    <div class="circle"></div>
+                    <h1 class="diagnosis-name">Systolic</h1>
+                  </div>
+                  <h1 class="diagnosis-value" id="systolic-value"></h1>
+                 
+                  <div class="diag-name">
+                    <img src="./assets/img/ArrowUp.svg" alt="arrow"/>
+                    <p class="diagnosis-comments-chart" id="systolic-comment"></p>
+                  </div>
+                </div>
+                <div class="hr"></div>
+                <div class="diagnosis-info ">
+                  <div class="diag-name">
+                    <div class="circle-diastolic"></div>
+                    <h1 class="diagnosis-name">Diastolic</h1>
+                  </div>
+                  <h1 class="diagnosis-value" id="diastolic-value"></h1>
+                
+                  <div class="diag-name">
+                    <img src="./assets/img/ArrowDown.svg" alt="arrow"/>
+                    <p class="diagnosis-comments-chart" id="diastolic-comment"></p>
+                  </div>
+                </div>
+              </div>
+             
+          
+          
+        
+        </div>
+          <div class="diagnosis-cards">
+            <div class="diagnosis-card respiratory">
+              <img src="./assets/img/respiratory.svg" alt="heart" />
+              <h2>Respiratory Rate</h2>
+              <h1 id="respiratory-rate"></h1>
+              <p id="respiratory-rate-levels"></p>
+            </div>
+            <div class="diagnosis-card temperature">
+              <img src="./assets/img/temperature.svg" alt="heart" />
+              <h2>Temperature</h2>
+              <h1 id="temperature"></h1>
+              <p id="temperature-levels"></p>
+            </div>
+            <div class="diagnosis-card heart">
+              <img src="./assets/img/heartbp.svg" alt="heart" />
+              <h2>Heart Rate</h2>
+              <h1 id="heart-rate"></h1>
+              <p id="heart-rate-levels"></p>
+
+              
+            </div>
+          </div>
+        </div>
+        <div class="diagnosis-list">
+          <h1>Diagnostic List</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="diagnostic-list">
+            </tbody>
+          </table>
+        </div>
+      </div>
+        <div class="right-bar">
+          <div class="right-bar-contact">
+            <div class="right-bar-details-info">
+              <div class="right-bar-details">
+                <img id="patient-profile-picture" />
+                <h1 id="patient-name" class="patient-names">Jessica Taylor</h1>
+              </div>
+              <div class="right-bar-details-contact">
+                <div class="patient-details-rightbar">
+                  <div><img src="./assets/img/BirthIcon.svg" /></div>
+                  <div class="patient-details--rightbar">
+                    <p>Date Of Birth</p>
+                    <h1 id="patient-dob"></h1>
+                  </div>
+                </div>
+                <div class="patient-details-rightbar">
+                  <div><img src="./assets/img/FemaleIcon.svg" /></div>
+                  <div class="patient-details--rightbar">
+                    <p>Gender</p>
+                    <h1 id="patient-gender"></h1>
+                  </div>
+                </div>
+                <div class="patient-details-rightbar">
+                  <div><img src="./assets/img/PhoneIcon.svg" /></div>
+                  <div class="patient-details--rightbar">
+                    <p>Contact Info.</p>
+                    <h1 id="patient-phone"></h1>
+                  </div>
+                </div>
+                <div class="patient-details-rightbar">
+                  <div><img src="./assets/img/PhoneIcon.svg" /></div>
+                  <div class="patient-details--rightbar">
+                    <p>Emergency Contacts</p>
+                    <h1 id="patient-emergency-contact"></h1>
+                  </div>
+                </div>
+                <div class="patient-details-rightbar">
+                  <div><img src="./assets/img/InsuranceIcon.svg" /></div>
+                  <div class="patient-details--rightbar">
+                    <p>Insurance Provider</p>
+                    <h1 id="patient-insurance"></h1>
+                  </div>
+                </div>
+
+                <button class="info-btn">Show All Information</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="lab-result">
+            <div class="labs">
+              <h1>Lab Results
+              </h1>
+              <p id="labs-container" class="labs-data"></p>
+          </div>
+        </div>
+
+       
+    </div>
+  </section>
+
+  <script>
+  
+
+  </script>
+</body>
+
+</html>
